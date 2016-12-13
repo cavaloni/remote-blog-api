@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: Y5kQpXLLtFJbOqkydZJ6GHn+bxsEizbM82NZ64ZaNVXH3TPee3wnBUyALracPx8KJvvdNtapNmeWgACxTHbuFeutmeU3kQ1L+cVyETDxhoQDVQtpOYhOxNPLncz7P1xt2+4Q0rW5V0/i+Ld4/R7aR9PA5FC8ysAqp69J8LVIWLi+NgIgzQE+URP0Ssh1Q5ntdq+INjFLli/ywaycEqIKsa0Md87s5j88MUed4XndQjIPup9UQ+VZ0DtjvtkLnrPuUcwLAImakAVicNw+DWNKVKY8ygyaJtUxy/4IuVzLLRQMGKKPDvU+yQ1wxAL8zH89evXJV2k9cA+G+nYw2+jSsJ3b0hjLEWMigVujASaQQGCYdRZ2f0YvCzlCkrCjfwc5ZBHMtptfBCczSaxhTO39XFge5uSLfju31+xH+qseyxVu3Is/WDaD1czCWF1YXuam9YLYGroTjEC3sJDzqT8LTcBuK3a8BIVRAks2W0uZEiQpFsk3au1aZXAgjCRnPp6gwdX8iClJB9LxyGH9OXogHtrVi9GnsEITbDA650eXLa2YOnkSAHrC7KnYuv7uXzWrU1rl/so/L9be2GIInML4w2zikUOkomwzinoL/QRxMWjeHlhDdqvjbIyG8tqHPTMeA9zrpi6n3MS8O6hTp8bz8T1SvRWxUkQS6Ow2RLYEjMg=
+  app: shrouded-stream-16598
+  on:
+    repo: cavaloni/blog-api
