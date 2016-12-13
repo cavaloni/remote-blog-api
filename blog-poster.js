@@ -6,6 +6,9 @@ const jsonParser = bodyParser.json();
 
 const {BlogPosts} = require("./models.js");
 
+BlogPosts.create('Yes', 'Author', 'Content', 'Alright');
+
+
 router.get ('/', jsonParser, (req, res) => {
     res.json(BlogPosts.get()); 
 });
@@ -38,7 +41,7 @@ router.put('/:id', jsonParser, (req, res) => {
             return res.status(400).send(message);
         }   
     }
-    if (!(req.params.id in req.body.id)) {
+    if (req.params.id !== req.body.id) {
         const message = (
       `Request path id (${req.params.id}) and request body id `
       `(${req.body.id}) must match`);
@@ -52,6 +55,7 @@ router.put('/:id', jsonParser, (req, res) => {
       author: req.body.author,
       publishDate: req.body.publishDate
     }
+    console.log(updatedPost);
     console.log('Updating Blog Post');
     let post = BlogPosts.update(updatedPost);
     res.status(204).json(post);

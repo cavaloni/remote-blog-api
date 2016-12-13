@@ -5,10 +5,12 @@ const app = express();
 
 const blogger = require('./blog-poster');
 
+
 app.use(morgan('common'));
 
 // app.use(express.static('public'));
 app.use('/blog-poster', blogger);
+
 
 // app.get('/', (req, res) => {
 //     res.sendfile(__dirname + '/index.html')
@@ -16,6 +18,8 @@ app.use('/blog-poster', blogger);
 
 
 
-app.listen(process.env.PORT || 8080, () => {
+const server = app.listen(process.env.PORT || 8080, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
 });
+
+module.exports = server;
